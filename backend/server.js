@@ -16,19 +16,12 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/payments", paymentRoutes)
 app.use("/api/ai", aiRoutes)
-const payments = [
-  app.get("/api/payments", (req, res) => {
-  res.json(payments);
-})
-];
+
 
 app.get("/", (req, res) => {
   res.send("AI Payment Recovery Backend is running");
 });
 
-app.get("/api/payments", (req, res) => {
-  res.json(payments);
-});
 
 app.listen(PORT, () => {
   console.log(`Backend is Running on http://localhost:${PORT}`);

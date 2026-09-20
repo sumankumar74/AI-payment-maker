@@ -1,8 +1,8 @@
 const express = require("express");
 const { analyzePaymentById } = require("../controllers/aiControllers");
-    
-const router = express.router();
 
-router.get("%id", analyzePaymentById);
+const router = express.Router();
 
-module.export = router;
+router.get("/:id", analyzePaymentById);
+
+module.exports = router;
